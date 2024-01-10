@@ -1,0 +1,109 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  /* reset da página com o nosso seletor universal */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  :root {
+      --bg-color: #000;
+      --primary-color: #EBCE07;
+      --primary-font:'Poppins', sans-serif;
+  }
+
+  body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: var(--bg-color);
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .title{
+    font-size: 40px;
+    text-align: center;
+    color: var(--primary-color);
+    user-select: none;
+    font-family: var(--primary-font);
+  }
+
+  .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+  }
+
+  .inputbox{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 40px;
+  }
+
+  .inputbox label{
+    position: relative;
+    transition: .5s;
+    top: 0;
+    left: 10px;
+    font-size: 20px;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    cursor: text;
+  }
+
+  .inputbox input{
+    position: absolute;
+    transition: .5s;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+
+  .inputbox input:focus,
+  .inputbox input:valid{
+    height: 100%;
+  }
+
+  .inputbox input:focus + label,
+  .inputbox input:valid + label{
+    top: -40px;
+    left: 0;
+  }
+
+  .container button{
+    justify-self: center;
+    width: 200px;
+    height: 50px;
+    border: 8px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+  }
+
+  footer>p{
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+  }
